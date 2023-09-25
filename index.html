@@ -1,32 +1,21 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap Project</title>
-    <!-- Meta tags -->
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Jiri Kocian" />
-    <!-- Author -->
-    <meta http-equiv="-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="bootstrap" />
-    <!-- Pro SEO vyhledavace -->
-    <!-- css kaskadove styly externi - jsou v rootu -->
+    <title>Kocian</title>
     <link rel="stylesheet" href="scss/custom.css" />
   </head>
-  <body>
+  <body class="bg-dark">
     <!-- Sekce - Home -->
-    <section
-      id="showcase"
-      class="d-flex justify-content-center align-items-center"
-    >
-      <div id="overlay"></div>
-      &gt;
-      <div id="header" class="container text-black col-6">
-        <h3 class="display-5 text-center mt-5">VÍTEJTE !</h3>
-        <h1 class="display-1 text-center">HOTEL MOZART</h1>
+    <section class="d-flex justify-content-center align-items-center">
+      <div id="header" class="container text-white col-6">
+        <h1 class="display-1 text-center">Hotel Paradise Maledives</h1>
         <div class="container mt-5" id="form">
           <form class="mb-5">
-            <h4 class="mb-3">Rezervace</h4>
+            <h4 class="mb-3">Rezervace hotelu</h4>
             <div class="row">
               <div class="mb-3 col-12 col-lg-4">
                 <label for="jmenoPrijmeni" class="form-label"
@@ -35,7 +24,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Jon Doe"
+                  placeholder="Jmeno Prijmeni"
                   id="jmenoPrijmeni"
                   aria-describedby="fullname"
                 />
@@ -55,7 +44,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="+420-555-555-555"
+                  placeholder="+420-111-222-333"
                   id="tel"
                   aria-describedby="Email"
                 />
@@ -129,7 +118,7 @@
                 type="checkbox"
                 value=""
                 id="licence"
-                checked=""
+                checked
               />
               <label class="form-check-label" for="licence"
                 >Souhlasím s licenčními podmínkami.</label
@@ -256,8 +245,7 @@
               class="card"
               data-toggle="tooltip"
               data-placement="right"
-              title=""
-              data-original-title="Tooltip on right"
+              title="Tooltip on right"
             >
               <img src="img/jednoluzko.jpg" alt="" class="card-image-top" />
               <div class="card-body">
@@ -329,8 +317,7 @@
               class="card"
               data-toggle="tooltip"
               data-placement="right"
-              title=""
-              data-original-title="Tooltip on right"
+              title="Tooltip on right"
             >
               <img src="img/dvouluzko.jpg" alt="" class="card-image-top" />
               <div class="card-body">
@@ -401,9 +388,8 @@
             <div
               class="card"
               data-toggle="popover"
-              title=""
+              title="Popover title"
               data-content="And here's some amazing content. It's very engaging. Right?"
-              data-original-title="Popover title"
             >
               <img
                 src="img/triluzak.jpg.crdownload"
@@ -478,9 +464,8 @@
             <div
               class="card"
               data-toggle="popover"
-              title=""
+              title="Popover title"
               data-content="And here's some amazing content. It's very engaging. Right?"
-              data-original-title="Popover title"
             >
               <img
                 src="img/ctyrluzak.jpg.crdownload"
@@ -564,8 +549,8 @@
         >
           <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1" class=""></li>
-            <li data-target="#carousel" data-slide-to="2" class=""></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -666,13 +651,6 @@
             <p><i class="bi bi-envelope-paper"></i> - email@myemail.com</p>
             <p><i class="bi bi-signpost-2"></i> - 100 Street Name</p>
             <p><i class="bi bi-flag"></i> - City,State,00000</p>
-            <p>
-              <small
-                ><a href="https://github.com/MetalusCz/Projekt-Hotel-Hotovo"
-                  >Git Hub</a
-                ></small
-              >
-            </p>
           </div>
         </div>
       </div>
@@ -695,12 +673,12 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <video
-              controls=""
+              controls
               src="video.mp4"
               type="video/mp4"
               width="100%"
@@ -718,9 +696,6 @@
         </div>
       </div>
     </div>
-
-    <h3>Zpet na hlavni stranku</h3>
-    <a href="/index.html">Zpet</a>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
