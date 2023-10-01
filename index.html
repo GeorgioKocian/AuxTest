@@ -1,8 +1,3 @@
-<!-- ToDoList - nepouzivat externi styly, jen bootstrap -->
-<!-- 1. Podkladovy obrazek, ne pomoci trid, ale pomoci bootstrapu do home -->
-<!-- 2. google fonty do historie -->
-<!-- 3. Predelat/upravit/promazat kontaktní formular-->
-<!-- 4. Umet nalinkovat fonty google a fontawesome - ne instalace jen linky... souvisi s bvodem 2-->
 <!-- 5. pomocí jaké trídy nebo jak se dela to ze se hamburger sbalí po kliku na položce ?? -->
 
 <!DOCTYPE html>
@@ -15,6 +10,23 @@
     <title>Kocian</title>
     <link rel="stylesheet" href="scss/custom.css" />
     <link rel="stylesheet" href="scss/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mooli&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-dark">
     <!-- 1. Section Home -->
@@ -30,12 +42,12 @@
             <div class="row">
               <div class="mb-3 col-12 col-lg-4">
                 <label for="jmenoPrijmeni" class="form-label"
-                  >Jméno, příjmení:</label
+                  >Jméno a příjmení:</label
                 >
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Jmeno Prijmeni"
+                  placeholder="Jméno a příjmení"
                   id="jmenoPrijmeni"
                   aria-describedby="fullname"
                 />
@@ -45,13 +57,13 @@
                 <input
                   type="email"
                   class="form-control"
-                  placeholder="myemail@email.com"
+                  placeholder="email@email.com"
                   id="Email"
                   aria-describedby="Email"
                 />
               </div>
               <div class="mb-3 col-12 col-lg-4">
-                <label for="tel" class="form-label">Tel.:</label>
+                <label for="tel" class="form-label">Telefonní číslo:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -63,24 +75,22 @@
             </div>
             <div class="row">
               <div class="col-12 col-lg-4">
-                <label for="osoby">Pocet osob</label>
+                <label for="osoby">Pocet osob:</label>
                 <select name="osoby" id="osoby" class="form-control">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
                 </select>
               </div>
               <div class="col-12 col-lg-4">
                 <label for="pokoj">Pokoj</label>
                 <select name="pokoj" id="pokoj" class="form-control">
-                  <option value="1">Jednolůžkový</option>
-                  <option value="2">Dvoulůžkový</option>
-                  <option value="3">Třílůžkový</option>
-                  <option value="4">Čtyřlůžkový</option>
+                  <option value="1">Pokoj č.1</option>
+                  <option value="2">Pokoj č.2</option>
+                  <option value="3">Pokoj č.3</option>
+                  <option value="4">Pokoj č.4</option>
                 </select>
               </div>
 
@@ -94,7 +104,7 @@
             </div>
             <div class="row">
               <div class="mb-3 col-12 col-lg-6">
-                <label for="od" class="form-label">Od:</label>
+                <label for="od" class="form-label">Pobyt od:</label>
                 <input
                   type="date"
                   class="form-control"
@@ -104,7 +114,7 @@
                 />
               </div>
               <div class="mb-3 col-12 col-lg-6">
-                <label for="do" class="form-label">Do:</label>
+                <label for="do" class="form-label">Pobyt do:</label>
                 <input
                   type="date"
                   class="form-control"
@@ -115,7 +125,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="request">Napiště nám.</label>
+              <label for="request">Napiště nám pro další info:</label>
               <textarea
                 name="poznamky"
                 id="request"
@@ -141,13 +151,50 @@
               </button>
               <button
                 type="button"
-                id="butprohlidka"
-                class="btn btn-secondary"
-                data-toggle="modal"
-                data-target="#prohlidka"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
               >
                 Prohlídka hotelu
               </button>
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+                style="display: none"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Video z Malediv
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close close-modal"
+                        data-bs-dismiss="modal"
+                        aria-label="Zavřít toto video"
+                      ></button>
+                    </div>
+                    <div class="modal-body video-embed">
+                      <iframe
+                        id=" iframeModelaVideo"
+                        width="100%"
+                        height="350px"
+                        src="https://www.youtube.com/embed/ddieUm_uaGU?si=ZQUbfq0RmhbB1jfa&amp;start=10"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <div class="modal-footer"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -160,8 +207,8 @@
       >
       <button
         class="navbar-toggler"
-        data-toggle="collapse"
-        data-target="#mainNav"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -178,7 +225,13 @@
             <a href="#pricing" class="nav-link">Ceník</a>
           </li>
           <li class="nav-item">
-            <a href="#contacts" class="nav-link">Kontatky</a>
+            <a
+              href="#contacts"
+              class="nav-link"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+              >Kontatky</a
+            >
           </li>
         </ul>
       </div>
@@ -189,7 +242,7 @@
         <h2>Historie</h2>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-3">
-            <p class="lead text-white">
+            <p class="lead text-white TextFontImport">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
               incidunt maiores esse similique sit, molestiae iste asperiores,
               harum quas at veniam eveniet ab est dicta modi tempora commodi
@@ -197,12 +250,15 @@
             </p>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-3">
-            <p class="text-white">
+            <p class="text-white TextFontImport2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Doloremque tempora laudantium voluptas laboriosam. Beatae qui quas
               numquam magni. Enim, ab autem quod aspernatur corporis fugiat
               voluptates debitis soluta totam dignissimos facilis nam unde,
-              dolorem sed mollitia quos hic fugit veniam.
+              dolorem sed mollitia quos hic fugit veniam. Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Voluptate exercitationem quod
+              non? Quae consequatur ipsam voluptate blanditiis distinctio
+              laudantium repellat?
             </p>
           </div>
           <div class="img-fluid col-md-6 d-none d-md-inline">
@@ -253,7 +309,7 @@
                       <td>1000 Kč</td>
                     </tr>
                     <tr>
-                      <td><b>2</b></td>
+                      <td><b>2 a více</b></td>
                       <td>1500 Kč</td>
                       <td>1200 Kč</td>
                       <td>1000 Kč</td>
@@ -303,7 +359,7 @@
                       <td>1000 Kč</td>
                     </tr>
                     <tr>
-                      <td><b>2</b></td>
+                      <td><b>2 a více</b></td>
                       <td>1500 Kč</td>
                       <td>1200 Kč</td>
                       <td>1000 Kč</td>
@@ -353,7 +409,7 @@
                       <td>1000 Kč</td>
                     </tr>
                     <tr>
-                      <td><b>2</b></td>
+                      <td><b>2 a více</b></td>
                       <td>1500 Kč</td>
                       <td>1200 Kč</td>
                       <td>1000 Kč</td>
@@ -403,7 +459,7 @@
                       <td>1000 Kč</td>
                     </tr>
                     <tr>
-                      <td><b>2</b></td>
+                      <td><b>2 a více</b></td>
                       <td>1500 Kč</td>
                       <td>1200 Kč</td>
                       <td>1000 Kč</td>
@@ -448,21 +504,27 @@
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
             <img src="Images/restaurace.jpg" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <div
+              class="carousel-caption d-none d-md-block bg-black bg-opacity-50 rounded"
+            >
               <h5>Restaurace</h5>
               <p>Hotelová restaurace - snídaně.</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img src="Images/jidlo.jpg" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <div
+              class="carousel-caption d-none d-md-block bg-black bg-opacity-50 rounded"
+            >
               <h5>Restaurace - obědové měnu</h5>
               <p>Obědy v hotelové restauraci.</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="Images/jidlo2.jpg" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <div
+              class="carousel-caption d-none d-md-block bg-black bg-opacity-50 rounded"
+            >
               <h5>Restaurace - večeře</h5>
               <p>Večeře v hotelové restauraci.</p>
             </div>
@@ -490,43 +552,53 @@
     </section>
 
     <!-- 5. Kontakty -->
-    <section>
-      <div
-        id="contacts"
-        class="container-fluid padding bg-dark text-white social"
-      >
-        <div class="row text-center">
-          <div class="col-md-12 col-xl-4 py-2">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3083.439269267612!2d16.090070313844834!3d49.46839164234134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d70ca0db57873%3A0x3883bb04d93cf798!2zQmFsw7Nub3bDvSBob3RlbCBSYWRlxaHDrW4!5e0!3m2!1scs!2scz!4v1654074878402!5m2!1scs!2scz"
-              width="100%"
-              height="100%"
-              style="border-radius: 10px"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="col-md-12 col-xl-4">
-            <a href="#" class="row justify-content-center"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="#" class="row justify-content-center"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a href="#" class="row justify-content-center"
-              ><i class="bi bi-instagram"></i
-            ></a>
-          </div>
-          <div class="col-md-12 col-xl-4 mt-5">
-            <img src="img/w3newbie.png" alt="" />
-            <p><i class="bi bi-telephone-inbound"></i> - 555-555-555</p>
-            <p><i class="bi bi-envelope-paper"></i> - email@myemail.com</p>
-            <p><i class="bi bi-signpost-2"></i> - 100 Street Name</p>
-            <p><i class="bi bi-flag"></i> - City,State,00000</p>
-          </div>
+
+    <section id="contacts" class="my-4">
+      <div class="row">
+        <!-- google map -->
+        <div class="col-md-4 p-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15958.126060921199!2d73.12790708715822!3d-0.6870005999999902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHotels!5e0!3m2!1sen!2scz!4v1696049106466!5m2!1sen!2scz"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
+        <!-- /google map -->
+        <!-- social media -->
+        <div class="col-md-4 col-sm-6 d-flex gap-3 justify-content-center">
+          <a href="https://www.facebook.com/"
+            ><i class="fa-brands fa-facebook fa-2xl"></i
+          ></a>
+          <a href="https://twitter.com/home"
+            ><i class="fa-brands fa-twitter fa-2xl"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+        </div>
+        <!-- /social media -->
+        <!-- address -->
+        <div class="col-md-4 col-sm-6 text-white">
+          <i class="fa-solid fa-map-location fa-beat text-white"></i>
+          <address>
+            Maledives resort<br />
+            At Sea 154 111 22<br />
+            Maledives Island
+          </address>
+          <a href="mailto:maledivy@google.com"
+            ><i class="fa-regular fa-envelope fa-beat"></i
+            >maledivy@google.com</a
+          ><br />
+          <i class="fa-solid fa-phone fa-beat"></i>+420 123456789
+        </div>
+        <!-- /address -->
       </div>
     </section>
+
     <!-- Modal -->
     <div
       class="modal fade"
@@ -571,5 +643,21 @@
 
     <!-- JS bundle: for carousel etc.. -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+      $(".modal").on("hide.bs.modal", function () {
+        var memory = $(this).html();
+        $(this).html(memory);
+      });
+      $(".navbar-collapse a").click(function () {
+        $(".navbar-collapse").collapse("hide");
+      });
+    </script>
   </body>
 </html>
